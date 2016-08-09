@@ -1,4 +1,4 @@
-package Cards;
+package structures;
 
 import java.util.List;
 
@@ -37,7 +37,7 @@ public class Hand {
 	 *  @return returns the card in the hand
 	 */
 	public List<Card> cardsInHand(){
-		return cards;;
+		return cards;
 	}
 	
 }
