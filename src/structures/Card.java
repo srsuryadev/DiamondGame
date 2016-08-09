@@ -1,4 +1,4 @@
-package Cards;
+package structures;
 
 public class Card {
 
