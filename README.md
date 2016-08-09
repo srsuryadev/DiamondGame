@@ -16,8 +16,9 @@ Our design has three main classes:
     * Data Members
         * cards
     * Methods
-        * addCard
-        * removeCard
+        * add
+        * remove
+        * removeAll
         * shuffle
         * cardsLeft
         * deal
