@@ -208,7 +208,7 @@ public class Poker extends Game {
 		System.out.println(p1.size());
 		System.out.println(p2.size());
 		System.out.println(d.size());
-		List<Card> lst = d.deal(5);
+		List<Card> lst = d.pick(5);
 		Hand h = new Hand();
 		for(int i =0; i< lst.size(); i++){
 			h.addCard(lst.get(i));

@@ -18,16 +18,6 @@ public class HeartsDiamonds extends Game{
 	@Override
 	public int evaluate(Player p) {
 		// TODO Auto-generated method stub
-		int answer = 0;
-		List<Card> pointsCards = p.getPointsCards();
-		for(Card c : pointsCards){
-			if(c.getSuit() == Suit.HEARTS ){
-				answer += 1;
-			}
-			else if(c.getSuit() == Suit.SPADES && c.getFace() == Face.QUEEN){
-				answer += 13;
-			}
-		}
 		return 0;
 	}
 	
@@ -44,7 +34,7 @@ public class HeartsDiamonds extends Game{
 		System.out.println(p1.size());
 		System.out.println(p2.size());
 		System.out.println(d.size());
-		List<Card> lst = d.deal(10);
+		List<Card> lst = d.pick(10);
 		for(int i =0; i< lst.size(); i++){
 			System.out.println(lst.get(i).getFace()+" of "+lst.get(i).getSuit());
 		}

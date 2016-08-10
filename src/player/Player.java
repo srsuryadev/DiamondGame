@@ -5,31 +5,30 @@ import structures.PointCards;
 
 import java.util.List;
 
+import strategy.Strategy;
 import structures.Card;
 
 public class Player {
-	private Hand h;
-	private PointCards pointCards;
+	private Hand hand;
+	private Strategy strategy; 
+	private String playerId;
 	
-	public Player(){
-		h = new Hand();
-		pointCards = new PointCards();
-	}
-
-	public boolean setHand(Hand h){
-		return true;
-	}
 	
-	public boolean addPointCards(List<Card> A){
-		pointCards.add(A);
-		return true;
+	public Player(Strategy s, String playerId){
+		this.strategy = s;
+		this.playerId = playerId;
 	}
-	
+		
 	public List<Card> getHand(){
-		return (List<Card>) h;
+		return (List<Card>) hand.cardsInHand();
 	}
 	
-	public List<Card> getPointsCards(){
-		return (List<Card>) pointCards;
+	public void allotHand(Hand h){
+		this.hand = h;
 	}
+	
+	public Card getBid(Card c){
+		return startegy.getNextMove(c, hand){
+	}
+		
 }

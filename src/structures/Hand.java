@@ -9,7 +9,11 @@ public class Hand {
 	private List<Card> cards;
 	
 	public Hand(){
-		cards = new ArrayList<Card>();
+		this.cards = new ArrayList<Card>();
+	}
+	
+	public Hand(List<Card> cards){
+		this.cards = cards;
 	}
 	/**
 	 * Adds a card to the Hand
@@ -19,6 +23,8 @@ public class Hand {
 	public boolean addCard(Card c){	
 		return cards.add(c);
 	}
+	
+	
 	
 	public Integer size(){
 		return cards.size();

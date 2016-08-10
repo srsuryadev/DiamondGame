@@ -53,11 +53,23 @@ public class Deck {
 		}
 	}
 	
+	public List<Card> pickSuit(Suit suit){
+		List<Card> suitCards = new ArrayList<Card>();
+		for (int i=0; i<this.cardsLeft(); i++) {
+			Card card = this.cards.get(i);
+			if(card.getSuit() == suit){
+				suitCards.add(card);
+				this.remove(card);
+			}
+		}
+		return suitCards;
+	}
+	
 	public void shuffle() {
 		Collections.shuffle(this.cards);
 	}
 	
-	public List<Card> deal(int n) {
+	public List<Card> pick(int n) {
 		ArrayList<Card> hand = new ArrayList<Card>();
 		for (int i=0; i<n; i++) {
 			Card card = this.cards.get(i);
