@@ -4,12 +4,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-/**
- * 
- * @author ashish
- *
- */
-
 public class Deck {
 
 	private List<Card> cards;

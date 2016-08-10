@@ -10,27 +10,26 @@ import structures.Card;
 
 public class Player {
 	private Hand hand;
-	private Strategy strategy; 
+	private Strategy strategy;
 	private String playerId;
-	
-	
-	public Player(Strategy s, String playerId){
+
+	public Player(Strategy s, String playerId) {
 		this.strategy = s;
 		this.playerId = playerId;
 	}
-		
-	public List<Card> getHand(){
+
+	public List<Card> getHand() {
 		return (List<Card>) hand.cardsInHand();
 	}
-	
-	public void allotHand(Hand h){
+
+	public void allotHand(Hand h) {
 		this.hand = h;
 	}
-	
-	public Card getBid(Card c){
-		Card bidCard =  this.strategy.getNextMove(hand, c);
+
+	public Card getBid(Card c) {
+		Card bidCard = this.strategy.getNextMove(hand, c);
 		this.hand.removeCard(bidCard);
 		return bidCard;
 	}
-		
+
 }

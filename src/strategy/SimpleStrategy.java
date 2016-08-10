@@ -24,5 +24,5 @@ public class SimpleStrategy implements Strategy {
 		return card;
 
 	}
-	
+
 }
