@@ -9,19 +9,26 @@ import java.util.List;
  * @author ashish
  *
  */
+
 public class Deck {
+
 	private List<Card> cards;
-	
-	public Deck(List<Card> cards) {
-		this.cards = cards;
-	}
 	
 	public Deck() {
 		this.cards = new ArrayList<Card>();
 	}
 	
-	public void add(Card card) {
-		this.cards.add(card);
+	
+	public void addPack(Pack p){
+		cards.addAll(p.cards);
+	}
+	
+	public Integer size(){
+		return cards.size();
+	}
+	
+	public boolean add(Card card) {
+		return this.cards.add(card);
 	}
 	
 	public boolean remove(Card card) {

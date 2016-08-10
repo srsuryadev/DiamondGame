@@ -1,5 +1,7 @@
 package structures;
 
+import java.util.Comparator;
+
 /**
  * 
  * @author ashish
@@ -39,4 +41,26 @@ public class Card {
 		return (this.suit == other.suit) 
 				&& (this.face == other.face); 
 	}
+}
+class CardComparator implements Comparator<Card>
+{
+
+    @Override
+    public int compare(Card o1, Card o2) 
+    {
+         if (o1.getSuit().ordinal() == o2.getSuit().ordinal() && o1.getFace().ordinal() == o2.getFace().ordinal()) 
+         {
+             return 0;
+         }
+         else if (o1.getSuit().ordinal() ==o2.getSuit().ordinal()) 
+         {
+             if (o1.getFace().ordinal() > o2.getFace().ordinal())
+                 return 1;                 
+             else                  
+                 return -1;                
+         }
+         else
+             return -1;    
+    }
+
 }
