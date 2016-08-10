@@ -12,7 +12,7 @@ public class SimpleStrategy implements Strategy {
 	@Override
 	public Card getNextMove(Hand handOfCards, Card bidOn) {
 
-		Random randomGenerator = null;
+		Random randomGenerator = new Random();
 
 		int index = randomGenerator.nextInt(handOfCards.cardsInHand().size());
 

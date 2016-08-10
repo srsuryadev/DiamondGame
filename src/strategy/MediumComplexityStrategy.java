@@ -9,10 +9,8 @@ public class MediumComplexityStrategy implements Strategy{
 	
 	 @Override
 	   public Card getNextMove(Hand handOfCards,Card bidOn) {
-		 
-		 Suit suit=handOfCards.cardsInHand().get(0).getSuit();
-		 Face face=bidOn.getFace();
-				 
-	      return new Card(suit,face);
+		 Suit suit = handOfCards.cardsInHand().get(0).getSuit();
+		 Face face = bidOn.getFace();
+	     return new Card(suit,face);
 	   }
 }

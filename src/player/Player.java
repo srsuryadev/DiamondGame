@@ -28,7 +28,9 @@ public class Player {
 	}
 	
 	public Card getBid(Card c){
-		return startegy.getNextMove(c, hand){
+		Card bidCard =  this.strategy.getNextMove(hand, c);
+		this.hand.removeCard(bidCard);
+		return bidCard;
 	}
 		
 }
